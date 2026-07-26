@@ -50,7 +50,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.05rem; }
-.brand img { width: 48px; height: 48px; border-radius: 13px; object-fit: cover; }
+.brand img { width: 80px; height: 80px; border-radius: 13px; object-fit: cover; }
 .main-nav { display: flex; align-items: center; gap: 26px; font-size: .94rem; }
 .main-nav a { opacity: .9; }
 .main-nav a:hover { opacity: 1; color: var(--gold); }
