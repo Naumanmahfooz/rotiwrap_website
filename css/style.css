@@ -172,40 +172,56 @@ footer p { color:rgba(255,255,255,.7); font-size:.9rem; }
   .menu-grid { grid-template-columns:1fr; }
   .menu-card { min-height:250px; }
   .location-card { padding:32px 24px; }
-  footer { flex-direction:column; text-align:center; }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 /* Powered by Hectasquare UK */
-
-.powered-by{
-    margin-top:24px;
-    text-align:center;
-    line-height:1.6;
+.powered-by {
+    margin: 0;
+    text-align: left;
+    line-height: 1.35;
+    min-width: 190px;
+    padding-right: 0px;
 }
 
-.powered-by div{
-    color:#bdbdbd;
-    font-size:0.85rem;
-    margin-bottom:4px;
+.powered-by div {
+    display: inline;
+    color: rgba(255,255,255,.7);
+    font-size: 0.78rem;
+    margin-right: 6px;
 }
 
-.powered-by a{
-    color:#d4af37;
-    text-decoration:none;
-    font-size:1rem;
-    font-weight:700;
+.powered-by > a {
+    display: inline;
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 700;
 }
 
-.powered-by a:hover{
-    text-decoration:underline;
+.powered-by small {
+    display: block;
+    margin-top: 3px;
 }
 
-.powered-by small{
-    display:block;
-    margin-top:2px;
+.powered-by small a {
+    color: rgba(255,255,255,.6);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 400;
 }
 
-.powered-by small a{
-    color:#9a9a9a;
-    font-size:0.8rem;
-    font-weight:400;
+.powered-by a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 620px) {
+    .powered-by {
+        text-align: center;
+        padding-right: 0;
+        margin-top: 16px;
+        min-width: 0;
+    }
 }
