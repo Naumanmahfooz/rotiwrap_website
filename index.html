@@ -10,6 +10,9 @@
   <meta property="og:image" content="images/hero-wrap.jpg" />
   <title>RotiWrap | Wonosobo</title>
   <link rel="icon" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,7 +21,6 @@
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="RotiWrap home">
       <img src="images/logo.png" alt="RotiWrap logo" />
-  
     </a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
@@ -178,33 +180,26 @@
     </section>
   </main>
 
-<footer>
-  <div>
-    <img src="images/logo.png" alt="RotiWrap logo" />
-    <p>Indo-Arab Flavour Love Story</p>
-  </div>
+  <footer>
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="RotiWrap logo" />
+      <p>Indo-Arab Flavour Love Story</p>
+    </div>
 
-  <p>
-    © <span id="year"></span> RotiWrap Indonesia.
-    <span
-      data-en="All rights reserved."
-      data-id="Hak cipta dilindungi."
-    >
-      All rights reserved.
-    </span>
-  </p>
+    <p class="footer-copyright">
+      © <span id="year"></span> RotiWrap Indonesia.
+      <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span>
+    </p>
 
-  <div class="powered-by">
-    <div>Powered&nbsp;by</div>
+    <div class="powered-by">
+      <span>Powered&nbsp;by</span>
+      <a href="https://hectasquare.com" target="_blank" rel="noopener">Hectasquare UK</a>
+      <small><a href="https://hectasquare.com" target="_blank" rel="noopener">www.hectasquare.com</a></small>
+    </div>
+  </footer>
 
-    <a href="https://hectasquare.com" target="_blank" rel="noopener">
-      Hectasquare UK
-    </a>
+  <a class="floating-whatsapp" href="https://wa.me/6281368840333" target="_blank" rel="noopener" aria-label="Chat with RotiWrap on WhatsApp">WA</a>
 
-    <small>
-      <a href="https://hectasquare.com" target="_blank" rel="noopener">
-        www.hectasquare.com
-      </a>
-    </small>
-  </div>
-</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
