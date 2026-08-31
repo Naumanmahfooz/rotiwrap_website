@@ -1,205 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="RotiWrap Wonosobo — Indo-Arab flavour love story. Chicken shawarma, beef doner, falafel, biryani boxes, salads, noodles and loaded fries." />
-  <meta name="theme-color" content="#2b1206" />
-  <meta property="og:title" content="RotiWrap — Indo-Arab Flavour Love Story" />
-  <meta property="og:description" content="Opening soon in Wonosobo. Fresh wraps, shawarma, biryani, salads, noodles and loaded fries." />
-  <meta property="og:image" content="images/hero-wrap.jpg" />
-  <title>RotiWrap | Wonosobo</title>
-  <link rel="icon" href="images/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="RotiWrap Wonosobo menyajikan shawarma wraps, biryani rice boxes, Mie Sultan, loaded fries, salad, dan camilan dengan cita rasa Indo-Arab modern." />
+  <meta name="theme-color" content="#ffc313" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://rotiwrap.id/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="RotiWrap" />
+  <meta property="og:title" content="RotiWrap Wonosobo | Indo-Arab Street Food" />
+  <meta property="og:description" content="Shawarma wraps, biryani rice boxes, Mie Sultan, loaded fries, dan lebih banyak menu favorit di Wonosobo." />
+  <meta property="og:url" content="https://rotiwrap.id/" />
+  <meta property="og:image" content="https://rotiwrap.id/images/hero-wrap.jpg" />
+  <meta property="og:image:alt" content="Chicken shawarma wrap RotiWrap" />
+
+  <title>RotiWrap Wonosobo | Indo-Arab Street Food</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png" />
+  <link rel="preload" href="images/hero-wrap.webp" as="image" media="(min-width: 721px)" />
+  <link rel="preload" href="images/hero-wrap-mobile.webp" as="image" media="(max-width: 720px)" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="RotiWrap home">
-      <img src="images/logo.png" alt="RotiWrap logo" />
-    </a>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="RotiWrap — kembali ke atas">
+        <img src="images/brand-mark.png" width="44" height="61" alt="" />
+        <span>RotiWrap</span>
+      </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Buka menu navigasi</span>
+        <span></span><span></span><span></span>
+      </button>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="#story" data-en="Our Story" data-id="Cerita Kami">Our Story</a>
-      <a href="#menu" data-en="Menu" data-id="Menu">Menu</a>
-      <a href="#location" data-en="Location" data-id="Lokasi">Location</a>
-      <a class="nav-cta" href="https://wa.me/6281368840333" target="_blank" rel="noopener" data-en="WhatsApp" data-id="WhatsApp">WhatsApp</a>
-      <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">ID</button>
-    </nav>
+      <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#favorit">Favorit</a>
+        <a href="#menu">Menu</a>
+        <a href="#lokasi">Lokasi</a>
+        <a class="nav-order" href="https://wa.me/6281368840333" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <img class="hero-bg" src="images/hero-wrap.jpg" alt="Grilled chicken shawarma wrap" />
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
-        <span class="eyebrow" data-en="OPENING SOON • WONOSOBO" data-id="SEGERA DIBUKA • WONOSOBO">OPENING SOON • WONOSOBO</span>
-        <h1>Indo-Arab<br><em>Flavour Love Story</em></h1>
-        <p data-en="Bold shawarma, warm toasted bread and flavours made to be remembered."
-           data-id="Shawarma penuh cita rasa, roti panggang hangat, dan rasa yang selalu dikenang.">
-          Bold shawarma, warm toasted bread and flavours made to be remembered.
-        </p>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture>
+        <source media="(max-width: 720px)" srcset="images/hero-wrap-mobile.webp" />
+        <img class="hero-image" src="images/hero-wrap.webp" width="1536" height="1024" alt="Shawarma wrap RotiWrap dengan ayam panggang dan sayuran segar" />
+      </picture>
+      <div class="hero-shade"></div>
+      <div class="hero-content content-shell">
+        <span class="location-kicker">Wonosobo · Jawa Tengah</span>
+        <h1 id="hero-title">Rasa Indo-Arab.<br /><em>Dibungkus lebih seru.</em></h1>
+        <p>Shawarma hangat, biryani penuh rasa, dan comfort food modern yang dibuat untuk dinikmati kapan saja.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#menu" data-en="Explore the Menu" data-id="Lihat Menu">Explore the Menu</a>
-          <a class="btn btn-ghost" href="https://wa.me/6281368840333" target="_blank" rel="noopener" data-en="Chat on WhatsApp" data-id="Chat via WhatsApp">Chat on WhatsApp</a>
+          <a class="button button-primary" href="#menu">Lihat Menu</a>
+          <a class="button button-light" href="#lokasi">Lokasi &amp; Pesan</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#story" aria-label="Scroll to story"><span></span></a>
+      <a class="hero-scroll" href="#tentang" aria-label="Lihat bagian berikutnya">Scroll</a>
     </section>
 
-    <section class="story section" id="story">
-      <div class="story-image reveal">
-        <img src="images/story.jpg" alt="RotiWrap Indo-Arab food story" />
+    <section class="intro section content-shell" id="tentang" aria-labelledby="about-title">
+      <div class="section-heading intro-heading">
+        <span class="eyebrow">Tentang RotiWrap</span>
+        <h2 id="about-title">Street food penuh karakter, dibuat dekat dengan selera kita.</h2>
       </div>
-      <div class="story-copy reveal">
-        <span class="eyebrow" data-en="OUR STORY" data-id="CERITA KAMI">OUR STORY</span>
-        <h2 data-en="Where Indonesian warmth meets Arab street-food soul."
-            data-id="Kehangatan Indonesia bertemu jiwa street food Arab.">
-          Where Indonesian warmth meets Arab street-food soul.
-        </h2>
-        <p data-en="RotiWrap brings together generous shawarma, griddle-toasted bread and vibrant local flavours. Every item is made to feel familiar, exciting and satisfying."
-           data-id="RotiWrap memadukan shawarma yang melimpah, roti panggang di atas griddle, dan cita rasa lokal yang hidup. Setiap menu dibuat terasa akrab, menarik, dan memuaskan.">
-          RotiWrap brings together generous shawarma, griddle-toasted bread and vibrant local flavours. Every item is made to feel familiar, exciting and satisfying.
-        </p>
-        <div class="story-points">
-          <div><strong>Fresh</strong><span data-en="Prepared with care" data-id="Disiapkan dengan teliti">Prepared with care</span></div>
-          <div><strong>Bold</strong><span data-en="Flavour in every bite" data-id="Rasa di setiap gigitan">Flavour in every bite</span></div>
-          <div><strong>Local</strong><span data-en="Made for Wonosobo" data-id="Dibuat untuk Wonosobo">Made for Wonosobo</span></div>
+      <div class="intro-copy">
+        <p>RotiWrap adalah fast-casual food spot di Wonosobo dengan inspirasi cita rasa Timur Tengah dan sentuhan yang terasa akrab. Menu kami berfokus pada shawarma, biryani, falafel, dan pilihan comfort food yang praktis, berani, dan memuaskan.</p>
+        <div class="intro-points" aria-label="Keunggulan RotiWrap">
+          <span><strong>Fresh</strong> Disiapkan dengan perhatian</span>
+          <span><strong>Bold</strong> Rasa kuat di setiap gigitan</span>
+          <span><strong>Local</strong> Dibuat untuk Wonosobo</span>
         </div>
       </div>
     </section>
 
-    <section class="menu section" id="menu">
-      <div class="section-heading reveal">
-        <span class="eyebrow" data-en="OUR MENU" data-id="MENU KAMI">OUR MENU</span>
-        <h2 data-en="One craving. Many ways to enjoy it." data-id="Satu selera. Banyak cara menikmatinya.">One craving. Many ways to enjoy it.</h2>
-      </div>
-
-      <div class="menu-grid">
-        <article class="menu-card reveal">
-          <span>01</span>
-          <h3 data-en="Signature Wraps" data-id="Wrap Andalan">Signature Wraps</h3>
-          <p data-en="Chicken shawarma, beef doner and falafel wrapped in warm, oil-toasted bread."
-             data-id="Chicken shawarma, beef doner, dan falafel dibungkus roti hangat yang dipanggang dengan sedikit minyak.">
-            Chicken shawarma, beef doner and falafel wrapped in warm, oil-toasted bread.
-          </p>
-        </article>
-        <article class="menu-card reveal">
-          <span>02</span>
-          <h3 data-en="Biryani Rice Boxes" data-id="Biryani Rice Box">Biryani Rice Boxes</h3>
-          <p data-en="Fragrant rice topped with your choice of chicken, beef or falafel."
-             data-id="Nasi beraroma khas dengan pilihan topping ayam, daging sapi, atau falafel.">
-            Fragrant rice topped with your choice of chicken, beef or falafel.
-          </p>
-        </article>
-        <article class="menu-card reveal">
-          <span>03</span>
-          <h3 data-en="Fresh Salad Boxes" data-id="Salad Box Segar">Fresh Salad Boxes</h3>
-          <p data-en="Crisp vegetables, rich sauces and satisfying shawarma or falafel."
-             data-id="Sayuran renyah, saus kaya rasa, serta pilihan shawarma atau falafel.">
-            Crisp vegetables, rich sauces and satisfying shawarma or falafel.
-          </p>
-        </article>
-        <article class="menu-card reveal">
-          <span>04</span>
-          <h3 data-en="Shawarma Noodle Bowls" data-id="Shawarma Noodle Bowl">Shawarma Noodle Bowls</h3>
-          <p data-en="Comforting noodles with an Indo-Arab twist."
-             data-id="Mie yang nikmat dengan sentuhan rasa Indo-Arab.">
-            Comforting noodles with an Indo-Arab twist.
-          </p>
-        </article>
-        <article class="menu-card reveal">
-          <span>05</span>
-          <h3 data-en="Loaded Fries" data-id="Loaded Fries">Loaded Fries</h3>
-          <p data-en="Seasoned fries piled with chicken, beef or falafel."
-             data-id="Kentang goreng berbumbu dengan topping ayam, daging sapi, atau falafel.">
-            Seasoned fries piled with chicken, beef or falafel.
-          </p>
-        </article>
-        <article class="menu-card accent reveal">
-          <span>+</span>
-          <h3 data-en="More Coming Soon" data-id="Menu Lain Segera Hadir">More Coming Soon</h3>
-          <p data-en="Follow us on Instagram for launch news, menu reveals and opening offers."
-             data-id="Ikuti Instagram kami untuk kabar pembukaan, menu baru, dan promo awal.">
-            Follow us on Instagram for launch news, menu reveals and opening offers.
-          </p>
-          <a href="https://www.instagram.com/rotiwrap.id?igsh=bnJ2YnRpcG1sYWVv&utm_source=qr" target="_blank" rel="noopener">@rotiwrap.id</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="banner">
-      <div class="banner-inner reveal">
-        <span data-en="COMING SOON" data-id="SEGERA DIBUKA">COMING SOON</span>
-        <h2 data-en="Wonosobo, get ready to wrap your hands around something special."
-            data-id="Wonosobo, bersiaplah menikmati sesuatu yang istimewa.">
-          Wonosobo, get ready to wrap your hands around something special.
-        </h2>
-        <a class="btn btn-primary" href="https://www.instagram.com/rotiwrap.id?igsh=bnJ2YnRpcG1sYWVv&utm_source=qr" target="_blank" rel="noopener" data-en="Follow Our Launch" data-id="Ikuti Pembukaan Kami">Follow Our Launch</a>
-      </div>
-    </section>
-
-    <section class="location section" id="location">
-      <div class="section-heading reveal">
-        <span class="eyebrow" data-en="FIND US" data-id="TEMUKAN KAMI">FIND US</span>
-        <h2 data-en="Opening soon in the heart of Wonosobo."
-            data-id="Segera dibuka di pusat Wonosobo.">
-          Opening soon in the heart of Wonosobo.
-        </h2>
-      </div>
-
-      <div class="location-grid">
-        <div class="location-card reveal">
-          <h3>RotiWrap Wonosobo</h3>
-          <address>
-            Jl. Kyai Hasyim Asyari No. 2,<br>
-            RT.01/RW.15, Longkrang,<br>
-            Wonosobo Timur, Kecamatan Wonosobo,<br>
-            Kabupaten Wonosobo, Jawa Tengah, Indonesia
-          </address>
-          <div class="contact-list">
-            <a href="https://wa.me/6281368840333" target="_blank" rel="noopener">WhatsApp: +62 813 6884 0333</a>
-            <a href="https://www.instagram.com/rotiwrap.id?igsh=bnJ2YnRpcG1sYWVv&utm_source=qr" target="_blank" rel="noopener">Instagram: @rotiwrap.id</a>
+    <section class="highlights section" id="favorit" aria-labelledby="highlights-title">
+      <div class="content-shell">
+        <div class="section-heading heading-row">
+          <div>
+            <span class="eyebrow">Pilihan RotiWrap</span>
+            <h2 id="highlights-title">Cari favoritmu.</h2>
           </div>
-          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Jl.%20Kyai%20Hasyim%20Asyari%20No.%202%20Wonosobo" target="_blank" rel="noopener" data-en="Open in Google Maps" data-id="Buka di Google Maps">Open in Google Maps</a>
+          <p>Dari wrap yang smoky sampai biryani dan Mie Sultan yang mengenyangkan.</p>
         </div>
 
-        <a class="map-placeholder reveal" href="https://www.google.com/maps/search/?api=1&query=Jl.%20Kyai%20Hasyim%20Asyari%20No.%202%20Wonosobo" target="_blank" rel="noopener" aria-label="Open RotiWrap location in Google Maps">
-          <div class="map-pin">R</div>
-          <span data-en="Tap to open location" data-id="Klik untuk membuka lokasi">Tap to open location</span>
+        <div class="highlight-grid">
+          <article class="highlight-card highlight-wide">
+            <img src="images/hero-wrap.webp" width="1536" height="1024" alt="Shawarma wrap RotiWrap" loading="lazy" decoding="async" />
+            <div><span>Paling ikonik</span><h3>Shawarma Wraps</h3><a href="#wraps">Lihat pilihan <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="highlight-card">
+            <img src="images/biryani.webp" width="886" height="886" alt="Chicken biryani bowl RotiWrap" loading="lazy" decoding="async" />
+            <div><h3>Biryani Rice Boxes</h3><a href="#biryani">Lihat pilihan <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="highlight-card">
+            <img src="images/mie-sultan.webp" width="886" height="886" alt="Mie Sultan dengan daging dan telur" loading="lazy" decoding="async" />
+            <div><h3>Mie Sultan</h3><a href="#mie-sultan">Lihat pilihan <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="highlight-card">
+            <img src="images/loaded-fries.webp" width="886" height="886" alt="Loaded fries RotiWrap" loading="lazy" decoding="async" />
+            <div><h3>Loaded Fries</h3><a href="#loaded-fries">Lihat pilihan <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="highlight-card">
+            <img src="images/falafel.webp" width="886" height="886" alt="Falafel dengan nasi biryani dan salad" loading="lazy" decoding="async" />
+            <div><h3>Falafel Favourites</h3><a href="#paket-hemat">Lihat Paket Hemat <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="highlight-card">
+            <img src="images/salad.webp" width="886" height="886" alt="Chicken shawarma salad RotiWrap" loading="lazy" decoding="async" />
+            <div><h3>Salad</h3><a href="#salad">Lihat pilihan <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="highlight-card">
+            <img src="images/fries.webp" width="600" height="900" alt="French fries berbumbu" loading="lazy" decoding="async" />
+            <div><h3>Fries &amp; Add-ons</h3><a href="#french-fries">Lihat pilihan <span aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo section" id="paket-hemat" aria-labelledby="promo-title">
+      <div class="promo-shell content-shell">
+        <div class="promo-intro">
+          <span class="promo-label">Paket Hemat</span>
+          <h2 id="promo-title">Semua <strong>25K</strong></h2>
+          <p>Enam pilihan hemat untuk makan enak tanpa banyak pikir.</p>
+        </div>
+        <div class="promo-list" role="list">
+          <div role="listitem"><span>Beef Biryani Bowl</span><strong>25K</strong></div>
+          <div role="listitem"><span>Chicken Biryani Bowl</span><strong>25K</strong></div>
+          <div role="listitem"><span>Falafel Biryani Bowl</span><strong>25K</strong></div>
+          <div role="listitem"><span>Mie Sultan Chicken</span><strong>25K</strong></div>
+          <div role="listitem"><span>Mie Sultan Beef</span><strong>25K</strong></div>
+          <div role="listitem"><span>Mie Sultan Falafel</span><strong>25K</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-menu section" id="menu" aria-labelledby="menu-title">
+      <div class="content-shell">
+        <div class="section-heading menu-heading">
+          <span class="eyebrow">Menu Lengkap</span>
+          <h2 id="menu-title">Pilih sesuai mood.</h2>
+          <p>Harga dan pilihan menu mengikuti katalog RotiWrap Wonosobo saat ini.</p>
+        </div>
+
+        <nav class="category-jump" aria-label="Lompat ke kategori menu">
+          <a href="#wraps">Wraps</a><a href="#biryani">Biryani</a><a href="#mie-sultan">Mie Sultan</a><a href="#loaded-fries">Loaded Fries</a><a href="#salad">Salad</a><a href="#french-fries">Fries</a><a href="#drinks">Drinks</a><a href="#sweet-treats">Sweet Treats</a>
+        </nav>
+
+        <div class="menu-columns">
+          <section class="menu-category" id="wraps">
+            <div class="category-title"><span>01</span><h3>Wraps</h3></div>
+            <ul class="price-list">
+              <li><span>Chicken Shawarma</span><strong>Rp 40.000</strong></li>
+              <li><span>Beef Shawarma</span><strong>Rp 45.000</strong></li>
+              <li><span>Falafel Shawarma</span><strong>Rp 35.000</strong></li>
+              <li><span>Chicken Falafel Fusion Shawarma</span><strong>Rp 40.000</strong></li>
+              <li><span>Beef Falafel Fusion Shawarma</span><strong>Rp 45.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="biryani">
+            <div class="category-title"><span>02</span><h3>Biryani Rice Boxes</h3></div>
+            <ul class="price-list">
+              <li><span>Falafel Biryani Bowl</span><strong>Rp 35.000</strong></li>
+              <li><span>Chicken Biryani Bowl</span><strong>Rp 40.000</strong></li>
+              <li><span>Beef Biryani Bowl</span><strong>Rp 45.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="mie-sultan">
+            <div class="category-title"><span>03</span><h3>Mie Sultan</h3></div>
+            <ul class="price-list">
+              <li><span>Mie Sultan Falafel</span><strong>Rp 35.000</strong></li>
+              <li><span>Mie Sultan Chicken</span><strong>Rp 40.000</strong></li>
+              <li><span>Mie Sultan Beef</span><strong>Rp 45.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="loaded-fries">
+            <div class="category-title"><span>04</span><h3>Loaded Fries</h3></div>
+            <ul class="price-list">
+              <li><span>Falafel Loaded Fries</span><strong>Rp 35.000</strong></li>
+              <li><span>Chicken Loaded Fries</span><strong>Rp 40.000</strong></li>
+              <li><span>Beef Loaded Fries</span><strong>Rp 45.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="salad">
+            <div class="category-title"><span>05</span><h3>Salad</h3></div>
+            <ul class="price-list">
+              <li><span>Falafel Shawarma Salad</span><strong>Rp 35.000</strong></li>
+              <li><span>Chicken Shawarma Salad</span><strong>Rp 40.000</strong></li>
+              <li><span>Beef Shawarma Salad</span><strong>Rp 45.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="french-fries">
+            <div class="category-title"><span>06</span><h3>French Fries</h3></div>
+            <ul class="price-list">
+              <li><span>Nori French Fries</span><strong>Rp 17.000</strong></li>
+              <li><span>Balado French Fries</span><strong>Rp 17.000</strong></li>
+              <li><span>Truffle French Fries</span><strong>Rp 17.000</strong></li>
+              <li><span>Cheese French Fries</span><strong>Rp 17.000</strong></li>
+            </ul>
+            <h4>Saus pilihan</h4>
+            <ul class="price-list compact">
+              <li><span>Garlic Mayo</span><strong>+Rp 3.000</strong></li>
+              <li><span>Chilli Tomato Sauce</span><strong>+Rp 3.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="drinks">
+            <div class="category-title"><span>07</span><h3>Drinks</h3></div>
+            <ul class="price-list">
+              <li><span>Lychee Tea</span><strong>Rp 17.000</strong></li>
+              <li><span>Lemon Tea</span><strong>Rp 17.000</strong></li>
+              <li><span>Cola Zero</span><strong>Rp 10.000</strong></li>
+              <li><span>Cola Original</span><strong>Rp 10.000</strong></li>
+              <li><span>Fanta Strawberry</span><strong>Rp 10.000</strong></li>
+              <li><span>Sprite</span><strong>Rp 10.000</strong></li>
+              <li><span>Ultra Mini Rasa Stroberi</span><strong>Rp 7.000</strong></li>
+              <li><span>Ultra Mini Rasa Vanila</span><strong>Rp 7.000</strong></li>
+              <li><span>Cleo Mineral</span><strong>Rp 7.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="sweet-treats">
+            <div class="category-title"><span>08</span><h3>Sweet Treats</h3></div>
+            <ul class="price-list">
+              <li><span>Chocolate Chip Cookie</span><strong>Rp 10.000</strong></li>
+              <li><span>Red Velvet Cookie</span><strong>Rp 10.000</strong></li>
+              <li><span>Three Cookies Bundle</span><strong>Rp 25.000</strong></li>
+              <li><span>Brownie</span><strong>Rp 15.000</strong></li>
+              <li><span>Chocolate Cookie</span><strong>Rp 10.000</strong></li>
+              <li><span>Chocolate Pudding</span><strong>Rp 10.000</strong></li>
+              <li><span>Mango Pudding</span><strong>Rp 10.000</strong></li>
+              <li><span>Strawberry Pudding</span><strong>Rp 10.000</strong></li>
+            </ul>
+          </section>
+
+          <section class="menu-category add-ons">
+            <div class="category-title"><span>+</span><h3>Add-ons</h3></div>
+            <ul class="price-list compact">
+              <li><span>Fried Egg</span><strong>+Rp 7.000</strong></li>
+              <li><span>Extra Chicken</span><strong>+Rp 15.000</strong></li>
+              <li><span>Extra Beef</span><strong>+Rp 20.000</strong></li>
+              <li><span>Extra Falafel</span><strong>+Rp 10.000</strong></li>
+              <li><span>Extra Garlic Mayo</span><strong>+Rp 3.000</strong></li>
+              <li><span>Extra Tomato Chilli Sauce</span><strong>+Rp 3.000</strong></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="order section" id="pesan" aria-labelledby="order-title">
+      <div class="content-shell order-shell">
+        <div>
+          <span class="eyebrow eyebrow-light">Pesan RotiWrap</span>
+          <h2 id="order-title">Lapar? Hubungi kami.</h2>
+          <p>Saat ini WhatsApp adalah kanal pemesanan yang telah dikonfirmasi. Kanal delivery lain dapat ditambahkan saat tautan resminya tersedia.</p>
+          <a class="button button-primary" href="https://wa.me/6281368840333" target="_blank" rel="noopener">WhatsApp +62 813 6884 0333</a>
+        </div>
+        <div class="channel-grid" aria-label="Kanal pemesanan">
+          <a class="channel active" href="https://wa.me/6281368840333" target="_blank" rel="noopener"><span>WA</span><strong>WhatsApp</strong><small>Pesan sekarang</small></a>
+          <div class="channel"><span>GF</span><strong>GoFood</strong><small>Tautan belum tersedia</small></div>
+          <div class="channel"><span>GR</span><strong>GrabFood</strong><small>Tautan belum tersedia</small></div>
+          <div class="channel"><span>SF</span><strong>ShopeeFood</strong><small>Tautan belum tersedia</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location section" id="lokasi" aria-labelledby="location-title">
+      <div class="content-shell location-shell">
+        <div class="location-copy">
+          <span class="eyebrow">Temukan Kami</span>
+          <h2 id="location-title">RotiWrap Wonosobo</h2>
+          <address>
+            Jl. Kyai Hasyim Asyari No. 2,<br />
+            RT.01/RW.15, Longkrang,<br />
+            Wonosobo Timur, Kecamatan Wonosobo,<br />
+            Kabupaten Wonosobo, Jawa Tengah
+          </address>
+          <div class="location-actions">
+            <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Kyai%20Hasyim%20Asyari%20No.%202%20Wonosobo" target="_blank" rel="noopener">Buka Google Maps</a>
+            <a class="text-link" href="https://wa.me/6281368840333" target="_blank" rel="noopener">Tanya via WhatsApp <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <a class="map-card" href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Kyai%20Hasyim%20Asyari%20No.%202%20Wonosobo" target="_blank" rel="noopener" aria-label="Buka lokasi RotiWrap Wonosobo di Google Maps">
+          <div class="map-mark"><img src="images/brand-mark.png" width="70" height="97" alt="" /></div>
+          <strong>Wonosobo</strong>
+          <span>Lihat lokasi di Google Maps</span>
         </a>
+      </div>
+    </section>
+
+    <section class="social-strip" aria-label="Ikuti RotiWrap">
+      <div class="content-shell social-shell">
+        <p><strong>Ikuti perjalanan RotiWrap.</strong> Menu baru, kabar outlet, dan promo terbaru.</p>
+        <a href="https://www.instagram.com/rotiwrap.id?igsh=bnJ2YnRpcG1sYWVv&amp;utm_source=qr" target="_blank" rel="noopener">Instagram @rotiwrap.id <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="RotiWrap logo" />
-      <p>Indo-Arab Flavour Love Story</p>
-    </div>
-
-    <p class="footer-copyright">
-      © <span id="year"></span> RotiWrap Indonesia.
-      <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span>
-    </p>
-
-    <div class="powered-by">
-      <span>Powered&nbsp;by</span>
-      <a href="https://hectasquare.com" target="_blank" rel="noopener">Hectasquare UK</a>
-      <small><a href="https://hectasquare.com" target="_blank" rel="noopener">www.hectasquare.com</a></small>
+  <footer class="site-footer">
+    <div class="content-shell footer-shell">
+      <a class="footer-brand" href="#top">
+        <img src="images/brand-mark.png" width="48" height="66" alt="" />
+        <span><strong>RotiWrap</strong><small>Wonosobo</small></span>
+      </a>
+      <nav aria-label="Navigasi footer"><a href="#tentang">Tentang</a><a href="#menu">Menu</a><a href="#pesan">Pesan</a><a href="#lokasi">Lokasi</a></nav>
+      <p>© <span id="year"></span> RotiWrap Indonesia.</p>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/6281368840333" target="_blank" rel="noopener" aria-label="Chat with RotiWrap on WhatsApp">WA</a>
-
-  <script src="js/script.js"></script>
+  <a class="floating-whatsapp" href="https://wa.me/6281368840333" target="_blank" rel="noopener" aria-label="Pesan RotiWrap melalui WhatsApp">WA</a>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

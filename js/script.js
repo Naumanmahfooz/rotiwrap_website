@@ -1,41 +1,38 @@
 const header = document.querySelector('.site-header');
-const progress = document.getElementById('scrollProgress');
-const menuToggle = document.getElementById('menuToggle');
-const mainNav = document.getElementById('mainNav');
-const langSwitch = document.getElementById('langSwitch');
-const translatables = document.querySelectorAll('[data-en][data-id]');
-let currentLang = 'en';
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
 
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 30);
-  const height = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = `${(window.scrollY / height) * 100}%`;
-});
+function setMenu(open) {
+  menuToggle.setAttribute('aria-expanded', String(open));
+  mainNav.classList.toggle('open', open);
+  header.classList.toggle('menu-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+function updateHeader() {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+}
 
 menuToggle.addEventListener('click', () => {
-  const open = mainNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(open));
+  setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
 });
 
-mainNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => mainNav.classList.remove('open'));
+mainNav.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMenu(false));
 });
 
-langSwitch.addEventListener('click', () => {
-  currentLang = currentLang === 'en' ? 'id' : 'en';
-  translatables.forEach(el => el.textContent = el.dataset[currentLang]);
-  langSwitch.textContent = currentLang === 'en' ? 'ID' : 'EN';
-  document.documentElement.lang = currentLang === 'en' ? 'en' : 'id';
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    setMenu(false);
+    menuToggle.focus();
+  }
 });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 760) setMenu(false);
+});
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
+
 document.getElementById('year').textContent = new Date().getFullYear();
