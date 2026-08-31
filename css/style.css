@@ -337,10 +337,7 @@ button { font: inherit; }
 .franchise-heading .eyebrow { margin-bottom: 17px; }
 .franchise h2 { margin: 0; font-size: clamp(2.35rem, 5vw, 4.5rem); line-height: 0.98; letter-spacing: -0.055em; }
 .franchise-copy > p:first-child { margin: 0; color: rgba(255, 255, 255, 0.73); font-size: 1.06rem; line-height: 1.72; }
-.franchise-actions { margin-top: 27px; display: flex; flex-wrap: wrap; gap: 11px; }
-.franchise-contacts { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 9px; color: rgba(255, 255, 255, 0.62); font-size: 0.86rem; }
-.franchise-contacts a { text-decoration: underline; text-decoration-color: rgba(255, 195, 19, 0.55); text-underline-offset: 4px; }
-.franchise-contacts a:hover { color: var(--yellow); }
+.franchise-actions { margin: 27px 0 0; display: flex; flex-wrap: wrap; gap: 11px; }
 .social-strip { padding-block: 32px; color: var(--ink); background: var(--yellow); }
 .social-shell { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .social-shell p { margin: 0; }
@@ -464,8 +461,6 @@ button { font: inherit; }
   .map-card { min-height: 300px; }
   .location-actions { align-items: stretch; flex-direction: column; }
   .franchise-actions { display: grid; grid-template-columns: 1fr; }
-  .franchise-contacts { align-items: flex-start; flex-direction: column; }
-  .franchise-contacts > span { display: none; }
   .text-link { padding-left: 8px; }
   .floating-whatsapp { right: 14px; bottom: 14px; width: 54px; height: 54px; }
 }
