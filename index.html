@@ -320,10 +320,40 @@
         </div>
         <div class="franchise-copy">
           <p data-i18n="franchiseDescription">Kami menyambut pertanyaan dari calon mitra franchise RotiWrap. Hubungi kami untuk membahas lokasi, operasional, dan peluang kerja sama.</p>
-          <div class="franchise-actions">
-            <a class="button button-primary" href="https://wa.me/447867867002" target="_blank" rel="noopener" data-contact-purpose="franchise" aria-label="Hubungi franchise RotiWrap melalui WhatsApp di +44 7867 867002" data-i18n="franchiseWhatsAppButton" data-i18n-aria-label="franchiseWhatsAppLabel">WhatsApp Franchise</a>
-            <a class="button button-light" href="mailto:nauman@rotiwrap.id" aria-label="Email franchise RotiWrap ke nauman@rotiwrap.id" data-contact-purpose="franchise" data-i18n="franchiseEmailButton" data-i18n-aria-label="franchiseEmailLabel">Email Franchise</a>
-          </div>
+          <form class="franchise-form" id="franchise-enquiry-form" method="post" data-endpoint="https://asia-southeast2-rotiwrap-epos-prod-jkt.cloudfunctions.net/submitFranchiseEnquiry" data-recaptcha-site-key="6LcNwaItAAAAAImNc36ABgnm3PDPzZk0U3ptCCM3" novalidate>
+            <h3 data-i18n="franchiseFormTitle">Formulir Minat Franchise</h3>
+            <div class="franchise-form-grid">
+              <div class="form-field">
+                <label for="franchise-name" data-i18n="franchiseNameLabel">Nama</label>
+                <input id="franchise-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="franchise-name-error" />
+                <span class="field-error" id="franchise-name-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="franchise-email" data-i18n="franchiseEmailLabel">Email</label>
+                <input id="franchise-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="franchise-email-error" />
+                <span class="field-error" id="franchise-email-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field franchise-form-wide">
+                <label for="franchise-phone" data-i18n="franchisePhoneLabel">Nomor Telepon</label>
+                <input id="franchise-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" pattern="[-+0-9() .]{7,30}" required aria-describedby="franchise-phone-error" />
+                <span class="field-error" id="franchise-phone-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field franchise-form-wide">
+                <label for="franchise-message" data-i18n="franchiseMessageLabel">Pesan</label>
+                <textarea id="franchise-message" name="message" rows="5" minlength="10" maxlength="2000" required aria-describedby="franchise-message-error"></textarea>
+                <span class="field-error" id="franchise-message-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="franchise-company-website">Website</label>
+              <input id="franchise-company-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="franchise-form-footer">
+              <button class="button button-primary" type="submit"><span data-i18n="franchiseSubmitButton">Kirim Permintaan</span></button>
+              <p data-i18n="franchisePrivacyNote">Data Anda hanya digunakan untuk menanggapi pertanyaan mengenai franchise RotiWrap.</p>
+            </div>
+            <p class="form-status" id="franchise-form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>

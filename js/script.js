@@ -80,11 +80,25 @@ const translations = {
     viewOnMaps: 'Lihat lokasi di Google Maps',
     franchiseEyebrow: 'Peluang Franchise',
     franchiseTitle: 'Tertarik Membuka RotiWrap?',
-    franchiseDescription: 'Kami menyambut pertanyaan dari calon mitra franchise RotiWrap. Hubungi kami untuk membahas lokasi, operasional, dan peluang kerja sama.',
-    franchiseWhatsAppButton: 'WhatsApp Franchise',
-    franchiseEmailButton: 'Email Franchise',
-    franchiseWhatsAppLabel: 'Hubungi franchise RotiWrap melalui WhatsApp di +44 7867 867002',
-    franchiseEmailLabel: 'Email franchise RotiWrap ke nauman@rotiwrap.id',
+    franchiseDescription: 'Kami menyambut pertanyaan dari calon mitra franchise RotiWrap. Isi formulir berikut untuk membahas lokasi, operasional, dan peluang kerja sama.',
+    franchiseFormTitle: 'Formulir Minat Franchise',
+    franchiseNameLabel: 'Nama',
+    franchiseEmailLabel: 'Email',
+    franchisePhoneLabel: 'Nomor Telepon',
+    franchiseMessageLabel: 'Pesan',
+    franchiseSubmitButton: 'Kirim Permintaan',
+    franchiseSubmittingButton: 'Mengirim…',
+    franchisePrivacyNote: 'Data Anda hanya digunakan untuk menanggapi pertanyaan mengenai franchise RotiWrap.',
+    franchiseNameRequired: 'Masukkan nama Anda.',
+    franchiseEmailRequired: 'Masukkan alamat email Anda.',
+    franchiseEmailInvalid: 'Masukkan alamat email yang valid.',
+    franchisePhoneRequired: 'Masukkan nomor telepon Anda.',
+    franchisePhoneInvalid: 'Masukkan nomor telepon yang valid.',
+    franchiseMessageRequired: 'Tulis pesan untuk tim franchise kami.',
+    franchiseMessageTooShort: 'Pesan harus berisi minimal 10 karakter.',
+    franchiseFormSuccess: 'Terima kasih. Permintaan franchise Anda telah dikirim.',
+    franchiseFormFailure: 'Permintaan belum dapat dikirim. Silakan coba lagi nanti.',
+    franchiseFormUnavailable: 'Formulir belum tersedia. Silakan coba lagi nanti.',
     socialLabel: 'Ikuti RotiWrap',
     socialDescription: '<strong>Ikuti perjalanan RotiWrap.</strong> Menu baru, kabar outlet, dan promo terbaru.',
     footerNavLabel: 'Navigasi footer',
@@ -172,11 +186,25 @@ const translations = {
     viewOnMaps: 'View location in Google Maps',
     franchiseEyebrow: 'Franchise Opportunities',
     franchiseTitle: 'Interested in Opening a RotiWrap?',
-    franchiseDescription: 'We welcome enquiries from potential RotiWrap franchise partners. Contact us to discuss locations, operations, and partnership opportunities.',
-    franchiseWhatsAppButton: 'Franchise WhatsApp',
-    franchiseEmailButton: 'Franchise Email',
-    franchiseWhatsAppLabel: 'Contact RotiWrap franchise enquiries on WhatsApp at +44 7867 867002',
-    franchiseEmailLabel: 'Email RotiWrap franchise enquiries at nauman@rotiwrap.id',
+    franchiseDescription: 'We welcome enquiries from potential RotiWrap franchise partners. Complete the form to discuss locations, operations, and partnership opportunities.',
+    franchiseFormTitle: 'Franchise Enquiry Form',
+    franchiseNameLabel: 'Name',
+    franchiseEmailLabel: 'Email',
+    franchisePhoneLabel: 'Phone Number',
+    franchiseMessageLabel: 'Message',
+    franchiseSubmitButton: 'Send Enquiry',
+    franchiseSubmittingButton: 'Sending…',
+    franchisePrivacyNote: 'Your details will only be used to respond to your RotiWrap franchise enquiry.',
+    franchiseNameRequired: 'Enter your name.',
+    franchiseEmailRequired: 'Enter your email address.',
+    franchiseEmailInvalid: 'Enter a valid email address.',
+    franchisePhoneRequired: 'Enter your phone number.',
+    franchisePhoneInvalid: 'Enter a valid phone number.',
+    franchiseMessageRequired: 'Write a message for our franchise team.',
+    franchiseMessageTooShort: 'Your message must contain at least 10 characters.',
+    franchiseFormSuccess: 'Thank you. Your franchise enquiry has been sent.',
+    franchiseFormFailure: 'Your enquiry could not be sent. Please try again later.',
+    franchiseFormUnavailable: 'The enquiry form is not available yet. Please try again later.',
     socialLabel: 'Follow RotiWrap',
     socialDescription: '<strong>Follow the RotiWrap journey.</strong> New menu items, outlet news, and the latest promotions.',
     footerNavLabel: 'Footer navigation',
@@ -192,7 +220,16 @@ const menuToggle = document.querySelector('.menu-toggle');
 const menuToggleLabel = menuToggle.querySelector('.sr-only');
 const mainNav = document.querySelector('.main-nav');
 const languageButtons = document.querySelectorAll('[data-lang]');
+const franchiseForm = document.getElementById('franchise-enquiry-form');
+const franchiseFormStatus = document.getElementById('franchise-form-status');
+const franchiseSubmitButton = franchiseForm.querySelector('button[type="submit"]');
+const franchiseSubmitLabel = franchiseSubmitButton.querySelector('span');
+const franchiseFields = Array.from(franchiseForm.querySelectorAll('input:not([type="hidden"]):not([name="website"]), textarea'));
 let currentLanguage = DEFAULT_LANGUAGE;
+let franchiseFormState = 'idle';
+let franchiseStatusKey = '';
+let pendingFranchiseSubmissionId = '';
+let recaptchaLoader;
 
 function savedLanguage() {
   try {
@@ -206,6 +243,15 @@ function savedLanguage() {
 function updateMenuLabel() {
   const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
   menuToggleLabel.textContent = translations[currentLanguage][isOpen ? 'menuCloseLabel' : 'menuOpenLabel'];
+}
+
+function renderFranchiseFormMessages() {
+  franchiseFields.forEach((field) => {
+    const error = document.getElementById(`${field.id}-error`);
+    if (error?.dataset.errorKey) error.textContent = translations[currentLanguage][error.dataset.errorKey];
+  });
+  franchiseFormStatus.textContent = franchiseStatusKey ? translations[currentLanguage][franchiseStatusKey] : '';
+  franchiseSubmitLabel.textContent = translations[currentLanguage][franchiseFormState === 'submitting' ? 'franchiseSubmittingButton' : 'franchiseSubmitButton'];
 }
 
 function applyLanguage(language, { persist = false } = {}) {
@@ -237,6 +283,7 @@ function applyLanguage(language, { persist = false } = {}) {
     button.setAttribute('aria-pressed', String(button.dataset.lang === currentLanguage));
   });
   updateMenuLabel();
+  renderFranchiseFormMessages();
   window.scrollTo(scrollPosition.x, scrollPosition.y);
 
   if (persist) {
@@ -247,6 +294,152 @@ function applyLanguage(language, { persist = false } = {}) {
     }
   }
 }
+
+function validationKey(field) {
+  const value = field.value.trim();
+  if (!value) {
+    return {
+      'franchise-name': 'franchiseNameRequired',
+      'franchise-email': 'franchiseEmailRequired',
+      'franchise-phone': 'franchisePhoneRequired',
+      'franchise-message': 'franchiseMessageRequired'
+    }[field.id];
+  }
+  if (field.id === 'franchise-email' && !field.validity.valid) return 'franchiseEmailInvalid';
+  if (field.id === 'franchise-phone' && !/^[-+0-9() .]{7,30}$/.test(value)) return 'franchisePhoneInvalid';
+  if (field.id === 'franchise-message' && value.length < 10) return 'franchiseMessageTooShort';
+  return '';
+}
+
+function validateFranchiseField(field) {
+  const error = document.getElementById(`${field.id}-error`);
+  const errorKey = validationKey(field);
+  error.dataset.errorKey = errorKey;
+  error.textContent = errorKey ? translations[currentLanguage][errorKey] : '';
+  field.setAttribute('aria-invalid', String(Boolean(errorKey)));
+  return !errorKey;
+}
+
+function setFranchiseStatus(key, state = 'error') {
+  franchiseStatusKey = key;
+  franchiseFormStatus.dataset.state = key ? state : '';
+  renderFranchiseFormMessages();
+}
+
+function configuredFranchiseEndpoint() {
+  const endpoint = franchiseForm.dataset.endpoint.trim();
+  return endpoint === 'https://asia-southeast2-rotiwrap-epos-prod-jkt.cloudfunctions.net/submitFranchiseEnquiry' ? endpoint : '';
+}
+
+function configuredRecaptchaSiteKey() {
+  const siteKey = franchiseForm.dataset.recaptchaSiteKey.trim();
+  return /^[A-Za-z0-9_-]{20,100}$/.test(siteKey) ? siteKey : '';
+}
+
+function loadRecaptcha(siteKey) {
+  if (window.grecaptcha?.enterprise) return Promise.resolve(window.grecaptcha.enterprise);
+  if (recaptchaLoader) return recaptchaLoader;
+  recaptchaLoader = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${encodeURIComponent(siteKey)}`;
+    script.async = true;
+    script.defer = true;
+    script.addEventListener('load', () => {
+      if (window.grecaptcha?.enterprise) resolve(window.grecaptcha.enterprise);
+      else reject(new Error('reCAPTCHA unavailable'));
+    }, { once: true });
+    script.addEventListener('error', () => reject(new Error('reCAPTCHA unavailable')), { once: true });
+    document.head.appendChild(script);
+  });
+  return recaptchaLoader;
+}
+
+async function franchiseCaptchaToken(siteKey) {
+  const recaptcha = await loadRecaptcha(siteKey);
+  return new Promise((resolve, reject) => {
+    recaptcha.ready(async () => {
+      try {
+        resolve(await recaptcha.execute(siteKey, { action: 'franchise_enquiry' }));
+      } catch (error) {
+        reject(error);
+      }
+    });
+  });
+}
+
+function newSubmissionId() {
+  if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+  const bytes = new Uint8Array(16);
+  window.crypto.getRandomValues(bytes);
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const value = Array.from(bytes, (byte) => byte.toString(16).padStart(2, '0')).join('');
+  return `${value.slice(0, 8)}-${value.slice(8, 12)}-${value.slice(12, 16)}-${value.slice(16, 20)}-${value.slice(20)}`;
+}
+
+franchiseFields.forEach((field) => {
+  field.addEventListener('blur', () => validateFranchiseField(field));
+  field.addEventListener('input', () => {
+    pendingFranchiseSubmissionId = '';
+    if (field.getAttribute('aria-invalid') === 'true') validateFranchiseField(field);
+  });
+});
+
+franchiseForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const fieldValidity = franchiseFields.map((field) => ({ field, valid: validateFranchiseField(field) }));
+  const firstInvalidField = fieldValidity.find(({ valid }) => !valid)?.field;
+  if (firstInvalidField) {
+    firstInvalidField.focus();
+    return;
+  }
+
+  const endpoint = configuredFranchiseEndpoint();
+  const siteKey = configuredRecaptchaSiteKey();
+  if (!endpoint || !siteKey) {
+    setFranchiseStatus('franchiseFormUnavailable');
+    return;
+  }
+
+  franchiseFormState = 'submitting';
+  franchiseSubmitButton.disabled = true;
+  setFranchiseStatus('');
+
+  try {
+    if (!pendingFranchiseSubmissionId) pendingFranchiseSubmissionId = newSubmissionId();
+    const captchaToken = await franchiseCaptchaToken(siteKey);
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: franchiseForm.elements.name.value.trim(),
+        email: franchiseForm.elements.email.value.trim(),
+        phone: franchiseForm.elements.phone.value.trim(),
+        message: franchiseForm.elements.message.value.trim(),
+        website: franchiseForm.elements.website.value.trim(),
+        captchaToken,
+        submissionId: pendingFranchiseSubmissionId
+      })
+    });
+    if (!response.ok) throw new Error('Franchise form submission failed');
+    franchiseForm.reset();
+    pendingFranchiseSubmissionId = '';
+    franchiseFields.forEach((field) => {
+      field.setAttribute('aria-invalid', 'false');
+      document.getElementById(`${field.id}-error`).dataset.errorKey = '';
+    });
+    setFranchiseStatus('franchiseFormSuccess', 'success');
+  } catch {
+    setFranchiseStatus('franchiseFormFailure');
+  } finally {
+    franchiseFormState = 'idle';
+    franchiseSubmitButton.disabled = false;
+    renderFranchiseFormMessages();
+  }
+});
 
 function setMenu(open) {
   menuToggle.setAttribute('aria-expanded', String(open));
