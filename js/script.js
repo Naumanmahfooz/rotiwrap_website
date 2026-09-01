@@ -60,6 +60,15 @@ const translations = {
     falafelImageAlt: 'Falafel dengan nasi biryani dan salad',
     saladImageAlt: 'Chicken shawarma salad RotiWrap',
     friesImageAlt: 'French fries berbumbu',
+    foodGalleryEyebrow: 'Dibuat Segar',
+    foodGalleryTitle: 'Kenali menu kami lebih dekat.',
+    foodGalleryDescription: 'Pilihan RotiWrap asli, dari shawarma hangat sampai loaded fries dan salad segar.',
+    beefShawarmaPhotoAlt: 'Beef Shawarma RotiWrap dengan sayuran segar dan saus',
+    beefBiryaniPhotoAlt: 'Beef Biryani Bowl RotiWrap dengan nasi berbumbu dan salad',
+    mieChickenPhotoAlt: 'Mie Sultan Chicken RotiWrap dengan ayam shawarma',
+    falafelLoadedFriesPhotoAlt: 'Falafel Loaded Fries RotiWrap dengan salad dan saus',
+    chickenLoadedFriesPhotoAlt: 'Chicken Loaded Fries RotiWrap dengan ayam, sayuran, dan saus',
+    chickenSaladPhotoAlt: 'Chicken Shawarma Salad RotiWrap dengan sayuran segar',
     promoTitle: 'Semua <strong>25K</strong>',
     promoDescription: 'Enam pilihan hemat untuk makan enak tanpa banyak pikir.',
     menuEyebrow: 'Menu Lengkap',
@@ -103,6 +112,7 @@ const translations = {
     socialDescription: '<strong>Ikuti perjalanan RotiWrap.</strong> Menu baru, kabar outlet, dan promo terbaru.',
     footerNavLabel: 'Navigasi footer',
     footerOrder: 'Pesan',
+    footerCredit: 'Powered by Hectasquare UK Ltd',
     floatingWhatsAppLabel: 'Pesan RotiWrap melalui WhatsApp'
   },
   en: {
@@ -166,6 +176,15 @@ const translations = {
     falafelImageAlt: 'Falafel with biryani rice and salad',
     saladImageAlt: 'RotiWrap chicken shawarma salad',
     friesImageAlt: 'Seasoned French fries',
+    foodGalleryEyebrow: 'Made Fresh',
+    foodGalleryTitle: 'Take a closer look at the menu.',
+    foodGalleryDescription: 'Real RotiWrap favourites, from warm shawarma to loaded fries and fresh salads.',
+    beefShawarmaPhotoAlt: 'RotiWrap Beef Shawarma with fresh vegetables and sauce',
+    beefBiryaniPhotoAlt: 'RotiWrap Beef Biryani Bowl with seasoned rice and salad',
+    mieChickenPhotoAlt: 'RotiWrap Mie Sultan Chicken with chicken shawarma',
+    falafelLoadedFriesPhotoAlt: 'RotiWrap Falafel Loaded Fries with salad and sauce',
+    chickenLoadedFriesPhotoAlt: 'RotiWrap Chicken Loaded Fries with chicken, vegetables, and sauce',
+    chickenSaladPhotoAlt: 'RotiWrap Chicken Shawarma Salad with fresh vegetables',
     promoTitle: 'All <strong>25K</strong>',
     promoDescription: 'Six great-value choices for an easy, satisfying meal.',
     menuEyebrow: 'Full Menu',
@@ -209,6 +228,7 @@ const translations = {
     socialDescription: '<strong>Follow the RotiWrap journey.</strong> New menu items, outlet news, and the latest promotions.',
     footerNavLabel: 'Footer navigation',
     footerOrder: 'Order',
+    footerCredit: 'Powered by Hectasquare UK Ltd',
     floatingWhatsAppLabel: 'Order RotiWrap through WhatsApp'
   }
 };
