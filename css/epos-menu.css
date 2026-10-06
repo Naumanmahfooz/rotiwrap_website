@@ -6,3 +6,12 @@
 [data-epos-menu] .epos-modifier-options { list-style:none; margin:0; padding:0 0 0 12px; }
 [data-epos-menu] .epos-modifier-options li { min-height:40px; gap:12px; }
 [data-epos-menu] .epos-modifier-options strong { font-size:.9rem; }
+
+/* Paket feature: grid cells are whole families, never individual products. */
+#paket-hemat .promo-family-grid { align-items:start; row-gap:28px; }
+#paket-hemat .promo-family { min-width:0; }
+#paket-hemat .promo-family h3 { margin:0 0 8px; font-size:.95rem; letter-spacing:.08em; }
+#paket-hemat .promo-family ul { list-style:none; padding:0; margin:0; }
+#paket-hemat .promo-family li { display:flex; justify-content:space-between; align-items:center; gap:14px; min-height:58px; padding:10px 0; border-bottom:1px solid rgba(33,20,13,.17); font-weight:760; }
+#paket-hemat .promo-family li span { min-width:0; overflow-wrap:anywhere; }
+#paket-hemat .promo-family li strong { white-space:nowrap; flex-shrink:0; font-size:1rem; }
