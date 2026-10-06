@@ -1218,6 +1218,79 @@
       ]
     },
     {
+      "productId": "CCGESNz06WTPCsFwkiGY",
+      "categoryId": "OgoNPSJhsftYnkWRJUCO",
+      "name": "Mie Sultan Beef",
+      "price": 45000,
+      "sortOrder": 39,
+      "active": true,
+      "available": true,
+      "modifiers": [
+        {
+          "id": "copy_7ac0b1b733a436eab59de8ec",
+          "name": "Add-ons",
+          "selectionType": "multi",
+          "required": false,
+          "minSelections": 0,
+          "maxSelections": 6,
+          "sortOrder": 0,
+          "defaultOptionIds": [],
+          "emptySelectionLabel": "No selection",
+          "options": [
+            {
+              "id": "copy_ae7d55a0a11846e1e322f0cc",
+              "name": "Fried Egg",
+              "priceDelta": 7000,
+              "sortOrder": 0,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_e27af7a3cee9465a34038df7",
+              "name": "Extra Chicken",
+              "priceDelta": 15000,
+              "sortOrder": 1,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_b06d5798409c1c024dc2a818",
+              "name": "Extra Beef",
+              "priceDelta": 20000,
+              "sortOrder": 2,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_7ac26e3a7ae061f50c696ca4",
+              "name": "Extra Falafel",
+              "priceDelta": 10000,
+              "sortOrder": 3,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_7083fca4ebb0d4d13d9874ed",
+              "name": "Extra Garlic Mayo",
+              "priceDelta": 3000,
+              "sortOrder": 4,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_daf229bac85aa0bad152bbef",
+              "name": "Extra Tomato Chilli Sauce",
+              "priceDelta": 3000,
+              "sortOrder": 5,
+              "defaultSelected": false
+            },
+            {
+              "id": "yysi1eqmko",
+              "name": "cheese",
+              "priceDelta": 5000,
+              "sortOrder": 6,
+              "defaultSelected": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "productId": "9rw1L5032VJScbTC11xl",
       "categoryId": "PsNwN3nia1gqm8B2G9Uy",
       "name": "Nori French Fries",
@@ -1430,56 +1503,56 @@
       "modifiers": []
     },
     {
-      "productId": "50Be2tWX3XK2DNzyOYoy",
-      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
-      "name": "Orange Choco Cookies",
-      "price": 12000,
-      "sortOrder": 34,
+      "productId": "UPHXzKUf3rXbwlIkK0Bd",
+      "categoryId": "OHEGui9G6144AfE6Bfkf",
+      "name": "Ultra Mini Rasa Stroberi",
+      "price": 7000,
+      "sortOrder": 46,
       "active": true,
       "available": true,
       "modifiers": []
     },
     {
-      "productId": "cU4lHsuscGuVNu73jO1z",
-      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
-      "name": "Red Velvet Cookie",
-      "price": 10000,
-      "sortOrder": 35,
+      "productId": "CUAIgZBmT9soch6H0u5e",
+      "categoryId": "OHEGui9G6144AfE6Bfkf",
+      "name": "Ultra Mini Rasa Vanila",
+      "price": 7000,
+      "sortOrder": 47,
       "active": true,
       "available": true,
       "modifiers": []
     },
     {
-      "productId": "x2Co4vg40osA3urmMzRs",
-      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
-      "name": "Japanese Brownies",
-      "price": 15000,
-      "sortOrder": 37,
+      "productId": "dTyGa031ak7hYV5pqyY7",
+      "categoryId": "OHEGui9G6144AfE6Bfkf",
+      "name": "Cleo Mineral",
+      "price": 7000,
+      "sortOrder": 48,
       "active": true,
       "available": true,
       "modifiers": []
     },
     {
-      "productId": "1YicomPGnlfJN4El2T0N",
-      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
-      "name": "Choco Cookies",
-      "price": 10000,
-      "sortOrder": 38,
+      "productId": "FjyvOX8bl7sYN3vLzc63",
+      "categoryId": "OHEGui9G6144AfE6Bfkf",
+      "name": "Ice Cubes",
+      "price": 3000,
+      "sortOrder": 54,
       "active": true,
       "available": true,
       "modifiers": []
     },
     {
-      "productId": "CCGESNz06WTPCsFwkiGY",
-      "categoryId": "OgoNPSJhsftYnkWRJUCO",
-      "name": "Mie Sultan Beef",
-      "price": 45000,
-      "sortOrder": 39,
+      "productId": "8uh3B6JXQd65KHZEeQ0B",
+      "categoryId": "Yh9HvvYQIxLVZGAcGa9N",
+      "name": "Chicken Shawarma(paket25)",
+      "price": 25000,
+      "sortOrder": 55,
       "active": true,
       "available": true,
       "modifiers": [
         {
-          "id": "copy_7ac0b1b733a436eab59de8ec",
+          "id": "copy_dc5956a2ce31a1151394dc01",
           "name": "Add-ons",
           "selectionType": "multi",
           "required": false,
@@ -1490,49 +1563,195 @@
           "emptySelectionLabel": "No selection",
           "options": [
             {
-              "id": "copy_ae7d55a0a11846e1e322f0cc",
+              "id": "copy_3512259dc0fdd0041eed4d3a",
               "name": "Fried Egg",
               "priceDelta": 7000,
               "sortOrder": 0,
               "defaultSelected": false
             },
             {
-              "id": "copy_e27af7a3cee9465a34038df7",
+              "id": "copy_8182ec440d270b7453056cd5",
               "name": "Extra Chicken",
               "priceDelta": 15000,
               "sortOrder": 1,
               "defaultSelected": false
             },
             {
-              "id": "copy_b06d5798409c1c024dc2a818",
+              "id": "copy_234c742c3086b5611fbeee75",
               "name": "Extra Beef",
               "priceDelta": 20000,
               "sortOrder": 2,
               "defaultSelected": false
             },
             {
-              "id": "copy_7ac26e3a7ae061f50c696ca4",
+              "id": "copy_e4df3000ef1d83cb291f3d35",
               "name": "Extra Falafel",
               "priceDelta": 10000,
               "sortOrder": 3,
               "defaultSelected": false
             },
             {
-              "id": "copy_7083fca4ebb0d4d13d9874ed",
+              "id": "copy_268370cc092651626e832b7c",
               "name": "Extra Garlic Mayo",
               "priceDelta": 3000,
               "sortOrder": 4,
               "defaultSelected": false
             },
             {
-              "id": "copy_daf229bac85aa0bad152bbef",
+              "id": "copy_82a3a97bd85bbdd9450a2500",
               "name": "Extra Tomato Chilli Sauce",
               "priceDelta": 3000,
               "sortOrder": 5,
               "defaultSelected": false
             },
             {
-              "id": "yysi1eqmko",
+              "id": "copy_db9e9551a0b552d34fe62591",
+              "name": "cheese",
+              "priceDelta": 5000,
+              "sortOrder": 6,
+              "defaultSelected": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": "E0aFI5qLcErG9JaHYsaN",
+      "categoryId": "Yh9HvvYQIxLVZGAcGa9N",
+      "name": "Beef Shawarma(paket25)",
+      "price": 25000,
+      "sortOrder": 56,
+      "active": true,
+      "available": true,
+      "modifiers": [
+        {
+          "id": "copy_ca40d9a771e2e73e2312f3b0",
+          "name": "Add-ons",
+          "selectionType": "multi",
+          "required": false,
+          "minSelections": 0,
+          "maxSelections": 6,
+          "sortOrder": 0,
+          "defaultOptionIds": [],
+          "emptySelectionLabel": "No selection",
+          "options": [
+            {
+              "id": "copy_103349100ecd3ad4c8a55baf",
+              "name": "Fried Egg",
+              "priceDelta": 7000,
+              "sortOrder": 0,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_35e4ff69038351be0d4faab6",
+              "name": "Extra Chicken",
+              "priceDelta": 15000,
+              "sortOrder": 1,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_81fb4cee53decfcc683e954c",
+              "name": "Extra Beef",
+              "priceDelta": 20000,
+              "sortOrder": 2,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_04247c1dd739c941b939ab4b",
+              "name": "Extra Falafel",
+              "priceDelta": 10000,
+              "sortOrder": 3,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_2161193c28ec07f0996d4422",
+              "name": "Extra Garlic Mayo",
+              "priceDelta": 3000,
+              "sortOrder": 4,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_758b5b7bb943727646c2d9fe",
+              "name": "Extra Tomato Chilli Sauce",
+              "priceDelta": 3000,
+              "sortOrder": 5,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_ca054a41efcb76441a7ccf65",
+              "name": "cheese",
+              "priceDelta": 5000,
+              "sortOrder": 6,
+              "defaultSelected": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": "9DWYxwFiXYSwfcPfJ0X9",
+      "categoryId": "Yh9HvvYQIxLVZGAcGa9N",
+      "name": "Falafel Shawarma(paket25)",
+      "price": 25000,
+      "sortOrder": 57,
+      "active": true,
+      "available": true,
+      "modifiers": [
+        {
+          "id": "copy_08736eccd820b9eecaec87b2",
+          "name": "Add-ons",
+          "selectionType": "multi",
+          "required": false,
+          "minSelections": 0,
+          "maxSelections": 6,
+          "sortOrder": 0,
+          "defaultOptionIds": [],
+          "emptySelectionLabel": "No selection",
+          "options": [
+            {
+              "id": "copy_a30d0ed4a212fad7380a8957",
+              "name": "Fried Egg",
+              "priceDelta": 7000,
+              "sortOrder": 0,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_ccd69306cd79dcd10abf4ddd",
+              "name": "Extra Chicken",
+              "priceDelta": 15000,
+              "sortOrder": 1,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_db780df3323fc5784400add4",
+              "name": "Extra Beef",
+              "priceDelta": 20000,
+              "sortOrder": 2,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_ed83868d89af135dc900ddde",
+              "name": "Extra Falafel",
+              "priceDelta": 10000,
+              "sortOrder": 3,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_4d04f803de206e662f41763d",
+              "name": "Extra Garlic Mayo",
+              "priceDelta": 3000,
+              "sortOrder": 4,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_b746681311632d0aa156eeef",
+              "name": "Extra Tomato Chilli Sauce",
+              "priceDelta": 3000,
+              "sortOrder": 5,
+              "defaultSelected": false
+            },
+            {
+              "id": "copy_912dae0379e12128a6f2221b",
               "name": "cheese",
               "priceDelta": 5000,
               "sortOrder": 6,
@@ -1981,31 +2200,41 @@
       ]
     },
     {
-      "productId": "UPHXzKUf3rXbwlIkK0Bd",
-      "categoryId": "OHEGui9G6144AfE6Bfkf",
-      "name": "Ultra Mini Rasa Stroberi",
-      "price": 7000,
-      "sortOrder": 46,
+      "productId": "50Be2tWX3XK2DNzyOYoy",
+      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
+      "name": "Orange Choco Cookies",
+      "price": 12000,
+      "sortOrder": 34,
       "active": true,
       "available": true,
       "modifiers": []
     },
     {
-      "productId": "CUAIgZBmT9soch6H0u5e",
-      "categoryId": "OHEGui9G6144AfE6Bfkf",
-      "name": "Ultra Mini Rasa Vanila",
-      "price": 7000,
-      "sortOrder": 47,
+      "productId": "cU4lHsuscGuVNu73jO1z",
+      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
+      "name": "Red Velvet Cookie",
+      "price": 10000,
+      "sortOrder": 35,
       "active": true,
       "available": true,
       "modifiers": []
     },
     {
-      "productId": "dTyGa031ak7hYV5pqyY7",
-      "categoryId": "OHEGui9G6144AfE6Bfkf",
-      "name": "Cleo Mineral",
-      "price": 7000,
-      "sortOrder": 48,
+      "productId": "1YicomPGnlfJN4El2T0N",
+      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
+      "name": "Choco Cookies",
+      "price": 10000,
+      "sortOrder": 38,
+      "active": true,
+      "available": true,
+      "modifiers": []
+    },
+    {
+      "productId": "x2Co4vg40osA3urmMzRs",
+      "categoryId": "7LE8QdcCZw1WkFHcR6YX",
+      "name": "Japanese Brownies",
+      "price": 15000,
+      "sortOrder": 37,
       "active": true,
       "available": true,
       "modifiers": []
@@ -2059,235 +2288,6 @@
       "active": true,
       "available": true,
       "modifiers": []
-    },
-    {
-      "productId": "FjyvOX8bl7sYN3vLzc63",
-      "categoryId": "OHEGui9G6144AfE6Bfkf",
-      "name": "Ice Cubes",
-      "price": 3000,
-      "sortOrder": 54,
-      "active": true,
-      "available": true,
-      "modifiers": []
-    },
-    {
-      "productId": "8uh3B6JXQd65KHZEeQ0B",
-      "categoryId": "Yh9HvvYQIxLVZGAcGa9N",
-      "name": "Chicken Shawarma(paket25)",
-      "price": 25000,
-      "sortOrder": 55,
-      "active": true,
-      "available": true,
-      "modifiers": [
-        {
-          "id": "copy_dc5956a2ce31a1151394dc01",
-          "name": "Add-ons",
-          "selectionType": "multi",
-          "required": false,
-          "minSelections": 0,
-          "maxSelections": 6,
-          "sortOrder": 0,
-          "defaultOptionIds": [],
-          "emptySelectionLabel": "No selection",
-          "options": [
-            {
-              "id": "copy_3512259dc0fdd0041eed4d3a",
-              "name": "Fried Egg",
-              "priceDelta": 7000,
-              "sortOrder": 0,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_8182ec440d270b7453056cd5",
-              "name": "Extra Chicken",
-              "priceDelta": 15000,
-              "sortOrder": 1,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_234c742c3086b5611fbeee75",
-              "name": "Extra Beef",
-              "priceDelta": 20000,
-              "sortOrder": 2,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_e4df3000ef1d83cb291f3d35",
-              "name": "Extra Falafel",
-              "priceDelta": 10000,
-              "sortOrder": 3,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_268370cc092651626e832b7c",
-              "name": "Extra Garlic Mayo",
-              "priceDelta": 3000,
-              "sortOrder": 4,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_82a3a97bd85bbdd9450a2500",
-              "name": "Extra Tomato Chilli Sauce",
-              "priceDelta": 3000,
-              "sortOrder": 5,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_db9e9551a0b552d34fe62591",
-              "name": "cheese",
-              "priceDelta": 5000,
-              "sortOrder": 6,
-              "defaultSelected": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "productId": "E0aFI5qLcErG9JaHYsaN",
-      "categoryId": "Yh9HvvYQIxLVZGAcGa9N",
-      "name": "Beef Shawarma(paket25)",
-      "price": 25000,
-      "sortOrder": 56,
-      "active": true,
-      "available": true,
-      "modifiers": [
-        {
-          "id": "copy_ca40d9a771e2e73e2312f3b0",
-          "name": "Add-ons",
-          "selectionType": "multi",
-          "required": false,
-          "minSelections": 0,
-          "maxSelections": 6,
-          "sortOrder": 0,
-          "defaultOptionIds": [],
-          "emptySelectionLabel": "No selection",
-          "options": [
-            {
-              "id": "copy_103349100ecd3ad4c8a55baf",
-              "name": "Fried Egg",
-              "priceDelta": 7000,
-              "sortOrder": 0,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_35e4ff69038351be0d4faab6",
-              "name": "Extra Chicken",
-              "priceDelta": 15000,
-              "sortOrder": 1,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_81fb4cee53decfcc683e954c",
-              "name": "Extra Beef",
-              "priceDelta": 20000,
-              "sortOrder": 2,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_04247c1dd739c941b939ab4b",
-              "name": "Extra Falafel",
-              "priceDelta": 10000,
-              "sortOrder": 3,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_2161193c28ec07f0996d4422",
-              "name": "Extra Garlic Mayo",
-              "priceDelta": 3000,
-              "sortOrder": 4,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_758b5b7bb943727646c2d9fe",
-              "name": "Extra Tomato Chilli Sauce",
-              "priceDelta": 3000,
-              "sortOrder": 5,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_ca054a41efcb76441a7ccf65",
-              "name": "cheese",
-              "priceDelta": 5000,
-              "sortOrder": 6,
-              "defaultSelected": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "productId": "9DWYxwFiXYSwfcPfJ0X9",
-      "categoryId": "Yh9HvvYQIxLVZGAcGa9N",
-      "name": "Falafel Shawarma(paket25)",
-      "price": 25000,
-      "sortOrder": 57,
-      "active": true,
-      "available": true,
-      "modifiers": [
-        {
-          "id": "copy_08736eccd820b9eecaec87b2",
-          "name": "Add-ons",
-          "selectionType": "multi",
-          "required": false,
-          "minSelections": 0,
-          "maxSelections": 6,
-          "sortOrder": 0,
-          "defaultOptionIds": [],
-          "emptySelectionLabel": "No selection",
-          "options": [
-            {
-              "id": "copy_a30d0ed4a212fad7380a8957",
-              "name": "Fried Egg",
-              "priceDelta": 7000,
-              "sortOrder": 0,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_ccd69306cd79dcd10abf4ddd",
-              "name": "Extra Chicken",
-              "priceDelta": 15000,
-              "sortOrder": 1,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_db780df3323fc5784400add4",
-              "name": "Extra Beef",
-              "priceDelta": 20000,
-              "sortOrder": 2,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_ed83868d89af135dc900ddde",
-              "name": "Extra Falafel",
-              "priceDelta": 10000,
-              "sortOrder": 3,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_4d04f803de206e662f41763d",
-              "name": "Extra Garlic Mayo",
-              "priceDelta": 3000,
-              "sortOrder": 4,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_b746681311632d0aa156eeef",
-              "name": "Extra Tomato Chilli Sauce",
-              "priceDelta": 3000,
-              "sortOrder": 5,
-              "defaultSelected": false
-            },
-            {
-              "id": "copy_912dae0379e12128a6f2221b",
-              "name": "cheese",
-              "priceDelta": 5000,
-              "sortOrder": 6,
-              "defaultSelected": false
-            }
-          ]
-        }
-      ]
     }
   ]
 }
